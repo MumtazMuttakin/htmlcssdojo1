@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TweetApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <!--<a href="/">TweetApp</a>-->
+        <%=  link_to("TweetApp","/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+         <!-- <a href="/about">Tentang</a>-->
+         <%=  link_to("Tentang","/about") %>
+        </li>
+        <li>
+         <%=  link_to("Post","/posts/index") %>
+        </li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>
+
